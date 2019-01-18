@@ -2,7 +2,7 @@
   "name": "fp-optics",
   "version": "1.0.0",
   "description": "Library with optics for work with data structures",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha -r ts-node/register test/*.test.js",
     "tdd": "mocha -r ts-node/register test/*.test.js --watch --watch-extensions ts",
