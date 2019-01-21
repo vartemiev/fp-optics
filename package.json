@@ -3,11 +3,12 @@
   "version": "2.2.0",
   "description": "Library with optics for work with data structures",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "mocha --compilers ts:ts-node/register test/*.test.ts",
     "tdd": "mocha -r ts-node/register test/*.test.ts --watch --watch-extensions ts",
     "start": "webpack-dev-server --inline --hot",
-    "build": "tsc -d",
+    "build": "tsc --project ./tsconfig.json",
     "prepare": "npm run test && npm run build"
   },
   "author": "Vsevolod Artemiev",
@@ -28,6 +29,6 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "typescript": "^3.1.6"
+    "typescript": "^3.2.4"
   }
 }

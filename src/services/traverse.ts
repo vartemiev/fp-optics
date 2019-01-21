@@ -14,8 +14,9 @@ const toOptic = (value: OpticPart): AnyOptic => {
     return value;
 };
 
+type Traverse = (F: IAlgebra) => (x2yF: MapF<any, any>) => (path: OpticPart | OpticPart[]) => Algebra<any>;
 
-export const traverse = (F: IAlgebra) => (x2yF: MapF<any, any>) => (path: OpticPart | OpticPart[]): Algebra<any> => {
+export const traverse: Traverse = F => x2yF => path => {
     const optic: AnyOptic = (path instanceof Array) ?
         compose(path.map(step => toOptic(step))) :
         toOptic(path);

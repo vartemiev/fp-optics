@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
     "outDir": "./lib",
     "allowJs": false,
     "target": "es5"
