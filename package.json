@@ -7,7 +7,7 @@
     "test": "mocha -r ts-node/register test/*.test.js",
     "tdd": "mocha -r ts-node/register test/*.test.js --watch --watch-extensions ts",
     "start": "webpack-dev-server --inline --hot",
-    "build": "webpack",
+    "build": "tsc -d",
     "prepare": "npm run test && npm run build"
   },
   "author": "Vsevolod Artemiev",
