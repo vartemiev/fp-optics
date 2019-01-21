@@ -1,11 +1,7 @@
 import { assert } from 'chai';
 
-import { remove } from '../src/services/remove';
+import { remove, replace, elems, values, when } from '../src';
 
-import { replace } from '../src/optics/replace';
-import { elems } from '../src/optics/elems';
-import { values } from '../src/optics/values';
-import { when } from '../src/optics/when'
 
 describe('`remove` method', () => {
     it('should update value and return origin data structure by valid lens path', () => {

@@ -4,8 +4,8 @@
   "description": "Library with optics for work with data structures",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register test/*.test.js",
-    "tdd": "mocha -r ts-node/register test/*.test.js --watch --watch-extensions ts",
+    "test": "mocha --compilers ts:ts-node/register test/*.test.ts",
+    "tdd": "mocha -r ts-node/register test/*.test.ts --watch --watch-extensions ts",
     "start": "webpack-dev-server --inline --hot",
     "build": "tsc -d",
     "prepare": "npm run test && npm run build"
@@ -15,6 +15,8 @@
   "devDependencies": {
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "chai": "^4.2.0",

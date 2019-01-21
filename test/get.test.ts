@@ -1,6 +1,5 @@
 import { assert } from 'chai';
-import { get } from '../src/services/get';
-import { replace } from '../src/optics/replace';
+import { get, replace } from "../src";
 
 describe('`get` method', () => {
     it('should return value by valid lens path', () => {
