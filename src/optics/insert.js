@@ -1,6 +1,4 @@
-import { AnyOptic } from "../types";
-
-export const insert = (idx: number): AnyOptic => F => x2yF => ds =>
+export const insert = idx => F => x2yF => ds =>
     ds instanceof Array ?
         F.map(y =>
                 y instanceof Array ?

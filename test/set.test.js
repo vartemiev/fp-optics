@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { set, replace, elems, values, when, insert } from '../src';
+import { set, replace, elems, values, when, insert } from '../src/index';
 
 
 describe('`set` method', () => {
