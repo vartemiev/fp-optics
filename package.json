@@ -3,32 +3,26 @@
   "version": "2.4.0",
   "description": "Library with optics for work with data structures",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "mocha --compilers ts:ts-node/register test/*.test.ts",
-    "tdd": "mocha -r ts-node/register test/*.test.ts --watch --watch-extensions ts",
+    "test": "mocha --require @babel/register --recursive 'test/'",
+    "tdd": "mocha --require @babel/register --watch --recursive 'test/'",
     "start": "webpack-dev-server --inline --hot",
-    "build": "tsc --project ./tsconfig.json",
+    "build": "babel ./src -d ./lib",
     "prepare": "npm run test && npm run build"
   },
   "author": "Vsevolod Artemiev",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
-    "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.5",
-    "awesome-typescript-loader": "^5.2.1",
+    "@babel/register": "^7.4.4",
     "babel-loader": "^8.0.4",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "source-map-loader": "^0.2.4",
-    "ts-node": "^7.0.1",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
-  },
-  "dependencies": {
-    "typescript": "^3.2.4"
   }
 }

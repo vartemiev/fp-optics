@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.ts',
+    entry: './src/index.js',
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'lib'),
@@ -13,18 +13,11 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.ts$/,
+                test: /\.js/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'awesome-typescript-loader'
-                }
-            },
-            {
-                test: /\.js$/,
-                enforce: "pre",
-                use: {
-                    loader: "source-map-loader"
-                }
+                use: [{
+                    loader: 'babel-loader'
+                }]
             }
         ]
     },
