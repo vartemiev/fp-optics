@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { remove, replace, elems, values, when } from '../src';
+import { remove, replace, elems, values, when } from '../src/index';
 
 
 describe('`remove` method', () => {

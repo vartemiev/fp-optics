@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { over, replace, elems, values, when, insert } from '../src';
+import { over, replace, elems, values, when, insert } from '../src/index';
 
 
 describe('`over` method', () => {
