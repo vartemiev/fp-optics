@@ -5,7 +5,9 @@ export * from './optics/insert';
 export * from './optics/replace';
 export * from './optics/when';
 
+export * from './services/sum';
 export * from './services/get';
 export * from './services/set';
 export * from './services/over';
 export * from './services/remove';
+export * from './services/collect';
